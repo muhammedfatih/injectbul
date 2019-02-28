@@ -2,6 +2,8 @@
 
 **Dependency Injection for NodeJS**
 
+[![](https://img.shields.io/npm/v/injectbul.svg)](https://www.npmjs.com/package/injectbul)
+
 ## 1. Introduction
 
 injectbul helps you implement basic dependency injection to your pure nodejs code. Unlike other packages, you don't need to any framework.
@@ -65,9 +67,32 @@ var config = [
 
 These injections are stored in `containers.container` variable which comes with injectbul package.
 
+Class definitions should contain a property with name `dependencies`. Implemented interfaces can be used as shown below:
+
+```
+class cityController{
+    contstructor(){
+        this.dependencies=["iistanbul", "iedirne"]
+    }
+    visitEyup(){
+        return this.iistanbul.eyup()
+    }
+    visitUzunkopru(){
+        return this.iedirne.uzunkopru()
+    }
+}
+```
+
 Whenever a class need an injection, it must be defined with a template below:
 
 ```
 var injectbul = new injectbul.injectbul(config)
-injectbul.inject(cityControllerClass)
+injectbul.inject(cityController)
+```
+
+Using a injected class should be called like shown below:
+
+```
+injectbul.get("cityController").visitEyup()
+injectbul.get("cityController").visitUzunkopru()
 ```
