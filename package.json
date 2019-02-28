@@ -1,0 +1,26 @@
+{
+	"name": "injectbul",
+	"version": "0.0.2",
+	"description": "Dependency Injection for NodeJs",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/muhammedfatih/injectbul.git"
+	},
+	"keywords": [
+		"dependency",
+		"injection",
+		"di",
+		"nodejs",
+		"injectbul"
+	],
+	"author": "Muhammed Fatih",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/muhammedfatih/injectbul/issues"
+	},
+	"homepage": "https://github.com/muhammedfatih/injectbul#readme"
+}
